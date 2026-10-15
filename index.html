@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameVault · Tu biblioteca de videojuegos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Iconos (se reutilizan con <use>) -->
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10M9 20v-6h6v6"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 8h16l-1 12H5L4 8Z"/><path d="m7 8 1-4h8l1 4"/></symbol>
+  <symbol id="i-library" viewBox="0 0 24 24"><path d="M5 4h4v16H5zM10 4h4v16h-4zM16 5l3-1 3 15-3 1z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.3-6 8-6s7.3 2 8 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/><path d="M9 12h11"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="m4 16-1 5 5-1L19 9l-4-4L4 16Z"/><path d="m13 7 4 4"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+</svg>
+
+<div class="app-shell">
+
+  <header class="desktop-nav">
+    <div class="logo"><span><svg class="ic"><use href="#i-library"/></svg></span>GameVault</div>
+    <nav aria-label="Principal">
+      <a href="#home">Inicio</a>
+      <a href="#store">Tienda</a>
+      <a href="#library">Biblioteca</a>
+      <a href="#profile">Perfil</a>
+    </nav>
+    <a class="avatar" href="#profile" aria-label="Abrir perfil">MG</a>
+  </header>
+  <nav class="mobile-nav" aria-label="Principal móvil">
+    <a href="#home"><svg class="ic"><use href="#i-home"/></svg><span>Inicio</span></a>
+    <a href="#store"><svg class="ic"><use href="#i-store"/></svg><span>Tienda</span></a>
+    <a href="#library"><svg class="ic"><use href="#i-library"/></svg><span>Biblioteca</span></a>
+    <a href="#profile"><svg class="ic"><use href="#i-user"/></svg><span>Perfil</span></a>
+  </nav>
+
+  <main>
+
+    <!-- ========== INICIO ========== -->
+    <section class="page" id="home">
+      <section class="hero">
+        <img src="https://images.unsplash.com/photo-1668624156054-528565e7efc8?auto=format&fit=crop&w=1200&q=85" alt="" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <span class="eyebrow">DESTACADO DE LA SEMANA</span>
+          <h1>Cyberpunk 2077</h1>
+          <p>Una historia de acción y aventura en una megalópolis obsesionada con el poder, el glamour y la modificación corporal.</p>
+          <div class="hero-actions"><strong>$159.900</strong><a class="btn btn-primary" href="#buy-1">Comprar ahora</a></div>
+        </div>
+        <span class="hero-index">01 / 03</span>
+      </section>
+
+      <section>
+        <div class="section-title"><h2>Juegos destacados</h2><a href="#store">Ver todos <svg class="ic"><use href="#i-chevron"/></svg></a></div>
+        <div class="games-row">
+          <article class="game-card compact"><a class="cover-button" href="#d2" aria-label="Ver Grand Theft Auto V"><img src="https://images.unsplash.com/photo-1708247874023-f6d71a45113a?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Acción</p><h3>Grand Theft Auto V</h3></div><div class="card-bottom"><strong>$59.900</strong></div></div></article>
+          <article class="game-card compact"><a class="cover-button" href="#d3" aria-label="Ver FIFA 24"><img src="https://images.unsplash.com/photo-1729158323904-c3147d9138a9?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Deportes</p><h3>FIFA 24</h3></div><div class="card-bottom"><strong>$109.900</strong></div></div></article>
+          <article class="game-card compact"><a class="cover-button" href="#d4" aria-label="Ver Minecraft"><img src="https://images.unsplash.com/photo-1788251402421-38cec6b02f96?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Aventura</p><h3>Minecraft</h3></div><div class="card-bottom"><strong>$119.900</strong></div></div></article>
+          <article class="game-card compact"><a class="cover-button" href="#d5" aria-label="Ver Forza Horizon 5"><img src="https://images.unsplash.com/photo-1679590373888-9363db416357?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Carreras</p><h3>Forza Horizon 5</h3></div><div class="card-bottom"><strong>$199.900</strong></div></div></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title"><h2>Nuevos lanzamientos</h2><a href="#store">Explorar tienda <svg class="ic"><use href="#i-chevron"/></svg></a></div>
+        <div class="games-row">
+          <article class="game-card compact"><a class="cover-button" href="#d5" aria-label="Ver Forza Horizon 5"><img src="https://images.unsplash.com/photo-1679590373888-9363db416357?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Carreras</p><h3>Forza Horizon 5</h3></div><div class="card-bottom"><strong>$199.900</strong></div></div></article>
+          <article class="game-card compact"><a class="cover-button" href="#d6" aria-label="Ver Elden Ring"><img src="https://images.unsplash.com/photo-1645300041147-769f0a6bb778?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>RPG</p><h3>Elden Ring</h3></div><div class="card-bottom"><strong>$219.900</strong></div></div></article>
+          <article class="game-card compact"><a class="cover-button" href="#d7" aria-label="Ver Night Circuit"><img src="https://images.unsplash.com/photo-1682079809978-559f47823e87?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Carreras</p><h3>Night Circuit</h3></div><div class="card-bottom"><strong>$89.900</strong></div></div></article>
+          <article class="game-card compact"><a class="cover-button" href="#d8" aria-label="Ver Silent District"><img src="https://images.unsplash.com/photo-1700257992019-0cd5995be606?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Acción</p><h3>Silent District</h3></div><div class="card-bottom"><strong>$74.900</strong></div></div></article>
+        </div>
+      </section>
+    </section>
+
+    <!-- ========== TIENDA ========== -->
+    <section class="page" id="store">
+      <div class="page-heading">
+        <div><span class="eyebrow">CATÁLOGO</span><h1>Tienda</h1><p>Descubre tu próxima aventura.</p></div>
+        <span class="result-count">8 juegos</span>
+      </div>
+      <div class="filters">
+        <label class="search"><svg class="ic"><use href="#i-search"/></svg><input type="text" placeholder="Buscar videojuegos..." aria-label="Buscar videojuegos" /></label>
+        <div class="filter-selects">
+          <span class="filter-icon"><svg class="ic"><use href="#i-filter"/></svg></span>
+          <label class="select-wrap"><span class="sr-only">Género</span><select name="genre" aria-label="Género"><option value="">Género</option><option>Acción</option><option>RPG</option><option>Carreras</option><option>Aventura</option><option>Deportes</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Plataforma</span><select aria-label="Plataforma"><option value="">Plataforma</option><option>PC</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Precio</span><select name="price" aria-label="Precio"><option value="">Precio</option><option value="low">Menos de $100.000</option><option value="high">Más de $100.000</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Ordenar</span><select aria-label="Ordenar"><option>Ordenar: Nombre</option><option>Ordenar: Precio</option><option>Ordenar: Fecha</option></select></label>
+        </div>
+      </div>
+      <div class="store-grid">
+        <article class="game-card" data-genre="RPG" data-price="high"><a class="cover-button" href="#d1" aria-label="Ver Cyberpunk 2077"><img src="https://images.unsplash.com/photo-1668624156054-528565e7efc8?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>RPG</p><h3>Cyberpunk 2077</h3></div><div class="card-bottom"><strong>$159.900</strong><a class="btn btn-secondary" href="#buy-1">Comprar</a></div><a class="detail-link" href="#d1">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+        <article class="game-card" data-genre="Acción" data-price="low"><a class="cover-button" href="#d2" aria-label="Ver Grand Theft Auto V"><img src="https://images.unsplash.com/photo-1708247874023-f6d71a45113a?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Acción</p><h3>Grand Theft Auto V</h3></div><div class="card-bottom"><strong>$59.900</strong><a class="btn btn-secondary" href="#buy-2">Comprar</a></div><a class="detail-link" href="#d2">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+        <article class="game-card" data-genre="Deportes" data-price="high"><a class="cover-button" href="#d3" aria-label="Ver FIFA 24"><img src="https://images.unsplash.com/photo-1729158323904-c3147d9138a9?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Deportes</p><h3>FIFA 24</h3></div><div class="card-bottom"><strong>$109.900</strong><a class="btn btn-secondary" href="#buy-3">Comprar</a></div><a class="detail-link" href="#d3">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+        <article class="game-card" data-genre="Aventura" data-price="high"><a class="cover-button" href="#d4" aria-label="Ver Minecraft"><img src="https://images.unsplash.com/photo-1788251402421-38cec6b02f96?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Aventura</p><h3>Minecraft</h3></div><div class="card-bottom"><strong>$119.900</strong><a class="btn btn-secondary" href="#buy-4">Comprar</a></div><a class="detail-link" href="#d4">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+        <article class="game-card" data-genre="Carreras" data-price="high"><a class="cover-button" href="#d5" aria-label="Ver Forza Horizon 5"><img src="https://images.unsplash.com/photo-1679590373888-9363db416357?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Carreras</p><h3>Forza Horizon 5</h3></div><div class="card-bottom"><strong>$199.900</strong><a class="btn btn-secondary" href="#buy-5">Comprar</a></div><a class="detail-link" href="#d5">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+        <article class="game-card" data-genre="RPG" data-price="high"><a class="cover-button" href="#d6" aria-label="Ver Elden Ring"><img src="https://images.unsplash.com/photo-1645300041147-769f0a6bb778?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>RPG</p><h3>Elden Ring</h3></div><div class="card-bottom"><strong>$219.900</strong><a class="btn btn-secondary" href="#buy-6">Comprar</a></div><a class="detail-link" href="#d6">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+        <article class="game-card" data-genre="Carreras" data-price="low"><a class="cover-button" href="#d7" aria-label="Ver Night Circuit"><img src="https://images.unsplash.com/photo-1682079809978-559f47823e87?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Carreras</p><h3>Night Circuit</h3></div><div class="card-bottom"><strong>$89.900</strong><a class="btn btn-secondary" href="#buy-7">Comprar</a></div><a class="detail-link" href="#d7">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+        <article class="game-card" data-genre="Acción" data-price="low"><a class="cover-button" href="#d8" aria-label="Ver Silent District"><img src="https://images.unsplash.com/photo-1700257992019-0cd5995be606?auto=format&fit=crop&w=800&q=80" alt="" /></a><div class="card-content"><div><p>Acción</p><h3>Silent District</h3></div><div class="card-bottom"><strong>$74.900</strong><a class="btn btn-secondary" href="#buy-8">Comprar</a></div><a class="detail-link" href="#d8">Ver detalles <svg class="ic"><use href="#i-chevron"/></svg></a></div></article>
+      </div>
+
+      <div class="empty" hidden><span><svg class="ic"><use href="#i-search"/></svg></span><h2>No encontramos juegos</h2><p>Prueba otra búsqueda o elimina algunos filtros.</p></div>
+
+      <!-- Modales de compra (se abren con :target) -->
+      <div class="modal-backdrop" id="buy-1"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>Cyberpunk 2077</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1668624156054-528565e7efc8?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>RPG</span><strong>$159.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+      <div class="modal-backdrop" id="buy-2"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>Grand Theft Auto V</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1708247874023-f6d71a45113a?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>Acción</span><strong>$59.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+      <div class="modal-backdrop" id="buy-3"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>FIFA 24</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1729158323904-c3147d9138a9?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>Deportes</span><strong>$109.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+      <div class="modal-backdrop" id="buy-4"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>Minecraft</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1788251402421-38cec6b02f96?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>Aventura</span><strong>$119.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+      <div class="modal-backdrop" id="buy-5"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>Forza Horizon 5</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1679590373888-9363db416357?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>Carreras</span><strong>$199.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+      <div class="modal-backdrop" id="buy-6"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>Elden Ring</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1645300041147-769f0a6bb778?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>RPG</span><strong>$219.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+      <div class="modal-backdrop" id="buy-7"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>Night Circuit</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1682079809978-559f47823e87?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>Carreras</span><strong>$89.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+      <div class="modal-backdrop" id="buy-8"><div class="modal" role="dialog" aria-modal="true"><a class="modal-close" href="#store" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></a><div class="modal-icon"><svg class="ic"><use href="#i-store"/></svg></div><h2>Confirmar compra</h2><p>Estás a punto de comprar <strong>Silent District</strong>. El juego se agregará a tu biblioteca.</p><div class="purchase-summary"><img src="https://images.unsplash.com/photo-1700257992019-0cd5995be606?auto=format&fit=crop&w=800&q=80" alt="" /><div><span>Acción</span><strong>$74.900</strong></div></div><div class="modal-actions"><a class="btn btn-ghost" href="#store">Cancelar</a><a class="btn btn-primary" href="#library">Confirmar compra</a></div></div></div>
+    </section>
+
+    <!-- ========== BIBLIOTECA ========== -->
+    <section class="page" id="library">
+      <input type="checkbox" id="rm-1" hidden /><input type="checkbox" id="rm-2" hidden /><input type="checkbox" id="rm-3" hidden /><input type="checkbox" id="rm-4" hidden /><input type="checkbox" id="rm-5" hidden /><input type="checkbox" id="rm-6" hidden />
+      <div class="page-heading">
+        <div><span class="eyebrow">TU COLECCIÓN</span><h1>Mi Biblioteca</h1><p>6 juegos listos para ti.</p></div>
+        <a class="btn btn-primary" href="#add"><svg class="ic"><use href="#i-plus"/></svg>Agregar videojuego</a>
+      </div>
+      <div class="filters">
+        <label class="search"><svg class="ic"><use href="#i-search"/></svg><input type="text" placeholder="Buscar videojuegos..." aria-label="Buscar videojuegos" /></label>
+        <div class="filter-selects">
+          <span class="filter-icon"><svg class="ic"><use href="#i-filter"/></svg></span>
+          <label class="select-wrap"><span class="sr-only">Género</span><select name="genre" aria-label="Género"><option value="">Género</option><option>Acción</option><option>RPG</option><option>Carreras</option><option>Aventura</option><option>Deportes</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Plataforma</span><select aria-label="Plataforma"><option value="">Plataforma</option><option>PC</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Estado</span><select name="status" aria-label="Estado"><option value="">Estado</option><option>Instalado</option><option>No instalado</option><option>Jugando</option><option>Completado</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Ordenar</span><select aria-label="Ordenar"><option>Ordenar: Nombre</option><option>Ordenar: Precio</option><option>Ordenar: Fecha</option><option>Última vez jugado</option></select></label>
+        </div>
+      </div>
+      <div class="library-grid">
+        <article class="library-card" id="c-1" data-genre="RPG" data-status="Instalado"><img src="https://images.unsplash.com/photo-1668624156054-528565e7efc8?auto=format&fit=crop&w=800&q=80" alt="" /><div class="library-card-content"><div class="library-card-head"><div><p>RPG</p><h3>Cyberpunk 2077</h3></div><details class="menu-wrap"><summary class="icon-button" aria-label="Opciones"><svg class="ic"><use href="#i-dots"/></svg></summary><div class="context-menu"><a href="#edit"><svg class="ic"><use href="#i-edit"/></svg>Editar</a><a href="#d1"><svg class="ic"><use href="#i-eye"/></svg>Ver detalles</a><a class="destructive" href="#del-1"><svg class="ic"><use href="#i-trash"/></svg>Eliminar</a></div></details></div><span class="status status-instalado"><i></i>Instalado</span><button type="button" class="btn btn-secondary"><svg class="ic"><use href="#i-play"/></svg>Jugar</button></div></article>
+        <article class="library-card" id="c-2" data-genre="Acción" data-status="Instalado"><img src="https://images.unsplash.com/photo-1708247874023-f6d71a45113a?auto=format&fit=crop&w=800&q=80" alt="" /><div class="library-card-content"><div class="library-card-head"><div><p>Acción</p><h3>Grand Theft Auto V</h3></div><details class="menu-wrap"><summary class="icon-button" aria-label="Opciones"><svg class="ic"><use href="#i-dots"/></svg></summary><div class="context-menu"><a href="#edit"><svg class="ic"><use href="#i-edit"/></svg>Editar</a><a href="#d2"><svg class="ic"><use href="#i-eye"/></svg>Ver detalles</a><a class="destructive" href="#del-2"><svg class="ic"><use href="#i-trash"/></svg>Eliminar</a></div></details></div><span class="status status-instalado"><i></i>Instalado</span><button type="button" class="btn btn-secondary"><svg class="ic"><use href="#i-play"/></svg>Jugar</button></div></article>
+        <article class="library-card" id="c-3" data-genre="Deportes" data-status="No instalado"><img src="https://images.unsplash.com/photo-1729158323904-c3147d9138a9?auto=format&fit=crop&w=800&q=80" alt="" /><div class="library-card-content"><div class="library-card-head"><div><p>Deportes</p><h3>FIFA 24</h3></div><details class="menu-wrap"><summary class="icon-button" aria-label="Opciones"><svg class="ic"><use href="#i-dots"/></svg></summary><div class="context-menu"><a href="#edit"><svg class="ic"><use href="#i-edit"/></svg>Editar</a><a href="#d3"><svg class="ic"><use href="#i-eye"/></svg>Ver detalles</a><a class="destructive" href="#del-3"><svg class="ic"><use href="#i-trash"/></svg>Eliminar</a></div></details></div><span class="status status-no-instalado"><i></i>No instalado</span><button type="button" class="btn btn-secondary"><svg class="ic"><use href="#i-play"/></svg>Jugar</button></div></article>
+        <article class="library-card" id="c-4" data-genre="Aventura" data-status="Jugando"><img src="https://images.unsplash.com/photo-1788251402421-38cec6b02f96?auto=format&fit=crop&w=800&q=80" alt="" /><div class="library-card-content"><div class="library-card-head"><div><p>Aventura</p><h3>Minecraft</h3></div><details class="menu-wrap"><summary class="icon-button" aria-label="Opciones"><svg class="ic"><use href="#i-dots"/></svg></summary><div class="context-menu"><a href="#edit"><svg class="ic"><use href="#i-edit"/></svg>Editar</a><a href="#d4"><svg class="ic"><use href="#i-eye"/></svg>Ver detalles</a><a class="destructive" href="#del-4"><svg class="ic"><use href="#i-trash"/></svg>Eliminar</a></div></details></div><span class="status status-jugando"><i></i>Jugando</span><button type="button" class="btn btn-secondary"><svg class="ic"><use href="#i-play"/></svg>Jugando</button></div></article>
+        <article class="library-card" id="c-5" data-genre="Carreras" data-status="Completado"><img src="https://images.unsplash.com/photo-1679590373888-9363db416357?auto=format&fit=crop&w=800&q=80" alt="" /><div class="library-card-content"><div class="library-card-head"><div><p>Carreras</p><h3>Forza Horizon 5</h3></div><details class="menu-wrap"><summary class="icon-button" aria-label="Opciones"><svg class="ic"><use href="#i-dots"/></svg></summary><div class="context-menu"><a href="#edit"><svg class="ic"><use href="#i-edit"/></svg>Editar</a><a href="#d5"><svg class="ic"><use href="#i-eye"/></svg>Ver detalles</a><a class="destructive" href="#del-5"><svg class="ic"><use href="#i-trash"/></svg>Eliminar</a></div></details></div><span class="status status-completado"><i></i>Completado</span><button type="button" class="btn btn-secondary"><svg class="ic"><use href="#i-play"/></svg>Jugar</button></div></article>
+        <article class="library-card" id="c-6" data-genre="RPG" data-status="No instalado"><img src="https://images.unsplash.com/photo-1645300041147-769f0a6bb778?auto=format&fit=crop&w=800&q=80" alt="" /><div class="library-card-content"><div class="library-card-head"><div><p>RPG</p><h3>Elden Ring</h3></div><details class="menu-wrap"><summary class="icon-button" aria-label="Opciones"><svg class="ic"><use href="#i-dots"/></svg></summary><div class="context-menu"><a href="#edit"><svg class="ic"><use href="#i-edit"/></svg>Editar</a><a href="#d6"><svg class="ic"><use href="#i-eye"/></svg>Ver detalles</a><a class="destructive" href="#del-6"><svg class="ic"><use href="#i-trash"/></svg>Eliminar</a></div></details></div><span class="status status-no-instalado"><i></i>No instalado</span><button type="button" class="btn btn-secondary"><svg class="ic"><use href="#i-play"/></svg>Jugar</button></div></article>
+      </div>
+
+      <div class="empty" hidden><span><svg class="ic"><use href="#i-search"/></svg></span><h2>No hay juegos para mostrar</h2><p>Cambia los filtros o agrega un videojuego a tu biblioteca.</p></div>
+
+      <!-- Confirmación de eliminación (:target + casilla oculta) -->
+      <div class="modal-backdrop" id="del-1"><div class="modal" role="dialog" aria-modal="true"><div class="modal-icon danger"><svg class="ic"><use href="#i-trash"/></svg></div><h2>¿Eliminar videojuego?</h2><p>¿Estás seguro de que deseas eliminar <strong>Cyberpunk 2077</strong> de tu biblioteca?</p><div class="modal-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><label class="btn btn-danger" for="rm-1">Eliminar</label></div></div></div>
+      <div class="modal-backdrop" id="del-2"><div class="modal" role="dialog" aria-modal="true"><div class="modal-icon danger"><svg class="ic"><use href="#i-trash"/></svg></div><h2>¿Eliminar videojuego?</h2><p>¿Estás seguro de que deseas eliminar <strong>Grand Theft Auto V</strong> de tu biblioteca?</p><div class="modal-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><label class="btn btn-danger" for="rm-2">Eliminar</label></div></div></div>
+      <div class="modal-backdrop" id="del-3"><div class="modal" role="dialog" aria-modal="true"><div class="modal-icon danger"><svg class="ic"><use href="#i-trash"/></svg></div><h2>¿Eliminar videojuego?</h2><p>¿Estás seguro de que deseas eliminar <strong>FIFA 24</strong> de tu biblioteca?</p><div class="modal-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><label class="btn btn-danger" for="rm-3">Eliminar</label></div></div></div>
+      <div class="modal-backdrop" id="del-4"><div class="modal" role="dialog" aria-modal="true"><div class="modal-icon danger"><svg class="ic"><use href="#i-trash"/></svg></div><h2>¿Eliminar videojuego?</h2><p>¿Estás seguro de que deseas eliminar <strong>Minecraft</strong> de tu biblioteca?</p><div class="modal-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><label class="btn btn-danger" for="rm-4">Eliminar</label></div></div></div>
+      <div class="modal-backdrop" id="del-5"><div class="modal" role="dialog" aria-modal="true"><div class="modal-icon danger"><svg class="ic"><use href="#i-trash"/></svg></div><h2>¿Eliminar videojuego?</h2><p>¿Estás seguro de que deseas eliminar <strong>Forza Horizon 5</strong> de tu biblioteca?</p><div class="modal-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><label class="btn btn-danger" for="rm-5">Eliminar</label></div></div></div>
+      <div class="modal-backdrop" id="del-6"><div class="modal" role="dialog" aria-modal="true"><div class="modal-icon danger"><svg class="ic"><use href="#i-trash"/></svg></div><h2>¿Eliminar videojuego?</h2><p>¿Estás seguro de que deseas eliminar <strong>Elden Ring</strong> de tu biblioteca?</p><div class="modal-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><label class="btn btn-danger" for="rm-6">Eliminar</label></div></div></div>
+    </section>
+
+    <!-- ========== AGREGAR ========== -->
+    <section class="page form-page" id="add">
+      <a class="back-link" href="#library"><svg class="ic"><use href="#i-back"/></svg>Volver a Biblioteca</a>
+      <div class="form-heading"><span class="eyebrow">NUEVO REGISTRO</span><h1>Agregar videojuego</h1><p>Completa la información para añadirlo a tu colección.</p></div>
+      <form class="game-form" action="#saved" method="get">
+        <div class="form-alert" role="alert">Revisa los campos marcados en rojo antes de continuar.</div>
+        <div class="form-grid">
+          <label class="field"><span>Nombre *</span><input type="text" name="nombre" required minlength="2" placeholder="Ej. Grand Theft Auto V" /><small>El nombre es obligatorio (mínimo 2 caracteres).</small></label>
+          <label class="field"><span>Precio *</span><div class="input-prefix"><span>$</span><input type="number" name="precio" required min="1" step="any" placeholder="59900" /></div><small>El precio debe ser mayor que 0.</small></label>
+          <label class="field"><span>Género *</span><select name="genero" required><option value="">Seleccionar género</option><option>Acción</option><option>RPG</option><option>Aventura</option><option>Carreras</option><option>Deportes</option></select><small>Debes seleccionar un género.</small></label>
+          <label class="field"><span>Categoría</span><input type="text" name="categoria" placeholder="Ej. Mundo abierto" /></label>
+          <label class="field"><span>Plataforma</span><select name="plataforma"><option>PC</option><option>Windows / Mac</option></select></label>
+          <label class="field"><span>Desarrollador</span><input type="text" name="desarrollador" placeholder="Nombre del estudio" /></label>
+          <label class="field"><span>Fecha de lanzamiento *</span><input type="text" name="fecha" required pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19[7-9][0-9]|20[0-9][0-9])" inputmode="numeric" placeholder="DD/MM/AAAA" /><small>Ingresa una fecha válida (DD/MM/AAAA).</small></label>
+          <label class="field"><span>Tamaño</span><input type="text" name="tamano" pattern="[0-9]+([.,][0-9]+)? ?(MB|GB|TB|mb|gb|tb)" placeholder="Ej. 80 GB" /><small>Usa un formato como 80 GB.</small></label>
+          <label class="field"><span>Estado</span><select name="estado"><option>No instalado</option><option>Instalado</option><option>Jugando</option><option>Completado</option></select></label>
+          <label class="field"><span>Portada (URL)</span><input type="url" name="portada" placeholder="https://..." /><small>Ingresa una URL válida que empiece por http:// o https://.</small></label>
+          <div class="full-field"><label class="field"><span>Descripción</span><textarea name="descripcion" rows="5" placeholder="Describe brevemente el videojuego..."></textarea></label></div>
+        </div>
+        <div class="form-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><button type="submit" class="btn btn-primary">Guardar videojuego</button></div>
+      </form>
+    </section>
+
+    <!-- ========== EDITAR (ejemplo con datos de Cyberpunk 2077) ========== -->
+    <section class="page form-page" id="edit">
+      <a class="back-link" href="#library"><svg class="ic"><use href="#i-back"/></svg>Volver a Biblioteca</a>
+      <div class="form-heading"><span class="eyebrow">GESTIONAR JUEGO</span><h1>Editar videojuego</h1><p>Actualiza la información de tu juego.</p></div>
+      <form class="game-form" action="#saved" method="get">
+        <div class="form-alert" role="alert">Revisa los campos marcados en rojo antes de continuar.</div>
+        <div class="form-grid">
+          <label class="field"><span>Nombre *</span><input type="text" name="nombre" required minlength="2" value="Cyberpunk 2077" /><small>El nombre es obligatorio (mínimo 2 caracteres).</small></label>
+          <label class="field"><span>Precio *</span><div class="input-prefix"><span>$</span><input type="number" name="precio" required min="1" step="any" value="159900" /></div><small>El precio debe ser mayor que 0.</small></label>
+          <label class="field"><span>Género *</span><select name="genero" required><option value="">Seleccionar género</option><option>Acción</option><option selected>RPG</option><option>Aventura</option><option>Carreras</option><option>Deportes</option></select><small>Debes seleccionar un género.</small></label>
+          <label class="field"><span>Categoría</span><input type="text" name="categoria" value="Mundo abierto" /></label>
+          <label class="field"><span>Plataforma</span><select name="plataforma"><option selected>PC</option><option>Windows / Mac</option></select></label>
+          <label class="field"><span>Desarrollador</span><input type="text" name="desarrollador" value="CD Projekt Red" /></label>
+          <label class="field"><span>Fecha de lanzamiento *</span><input type="text" name="fecha" required pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19[7-9][0-9]|20[0-9][0-9])" inputmode="numeric" value="10/12/2020" /><small>Ingresa una fecha válida (DD/MM/AAAA).</small></label>
+          <label class="field"><span>Tamaño</span><input type="text" name="tamano" pattern="[0-9]+([.,][0-9]+)? ?(MB|GB|TB|mb|gb|tb)" value="70 GB" /><small>Usa un formato como 80 GB.</small></label>
+          <label class="field"><span>Estado</span><select name="estado"><option selected>Instalado</option><option>No instalado</option><option>Jugando</option><option>Completado</option></select></label>
+          <label class="field"><span>Portada (URL)</span><input type="url" name="portada" placeholder="https://..." /><small>Ingresa una URL válida que empiece por http:// o https://.</small></label>
+          <div class="full-field"><label class="field"><span>Descripción</span><textarea name="descripcion" rows="5">Una historia de acción y aventura en una megalópolis obsesionada con el poder, el glamour y la modificación corporal.</textarea></label></div>
+        </div>
+        <div class="form-actions"><a class="btn btn-ghost" href="#library">Cancelar</a><button type="submit" class="btn btn-primary">Guardar cambios</button></div>
+      </form>
+    </section>
+
+    <!-- ========== CONFIRMACIÓN DE FORMULARIO ========== -->
+    <section class="page saved" id="saved">
+      <div class="empty"><span class="ok"><svg class="ic"><use href="#i-check"/></svg></span><h2>Datos válidos</h2><p>El formulario se validó correctamente. El guardado se implementará en la siguiente entrega.</p><a class="btn btn-primary" href="#library">Volver a Biblioteca</a></div>
+    </section>
+
+    <!-- ========== PERFIL ========== -->
+    <section class="page profile-page" id="profile">
+      <div class="profile-hero"><div class="profile-avatar">MG</div><div><span class="eyebrow">PERFIL</span><h1>Mateo Gómez</h1><p>Miembro desde 2023</p></div></div>
+      <div class="stats">
+        <article><strong>6</strong><span>Juegos</span></article>
+        <article><strong>18</strong><span>Completados</span></article>
+        <article><strong>246 h</strong><span>Tiempo jugado</span></article>
+      </div>
+      <section class="profile-panel">
+        <h2>Tu cuenta</h2>
+        <div><span>Correo electrónico</span><strong>mateo@gamevault.co</strong></div>
+        <div><span>Región</span><strong>Colombia</strong></div>
+        <div><span>Plataforma principal</span><strong>PC</strong></div>
+      </section>
+    </section>
+
+    <!-- ========== DETALLES (uno por juego) ========== -->
+    <section class="detail-page" id="d1"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1668624156054-528565e7efc8?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1668624156054-528565e7efc8?auto=format&fit=crop&w=800&q=80" alt="Portada de Cyberpunk 2077" /><div class="detail-copy"><span class="eyebrow">RPG · Mundo abierto</span><h1>Cyberpunk 2077</h1><p class="detail-description">Una historia de acción y aventura en una megalópolis obsesionada con el poder, el glamour y la modificación corporal.</p><dl><div><dt>Desarrollador</dt><dd>CD Projekt Red</dd></div><div><dt>Fecha de lanzamiento</dt><dd>10/12/2020</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>70 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$159.900</strong></div><a class="btn btn-primary" href="#buy-1">Comprar ahora</a><input type="checkbox" id="fav-1" class="sr-only" /><label class="btn btn-secondary fav" for="fav-1"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+    <section class="detail-page" id="d2"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1708247874023-f6d71a45113a?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1708247874023-f6d71a45113a?auto=format&fit=crop&w=800&q=80" alt="Portada de Grand Theft Auto V" /><div class="detail-copy"><span class="eyebrow">Acción · Mundo abierto</span><h1>Grand Theft Auto V</h1><p class="detail-description">Tres criminales arriesgan todo en una serie de peligrosos golpes en una ciudad donde no pueden confiar en nadie.</p><dl><div><dt>Desarrollador</dt><dd>Rockstar Games</dd></div><div><dt>Fecha de lanzamiento</dt><dd>17/09/2013</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>110 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$59.900</strong></div><a class="btn btn-primary" href="#buy-2">Comprar ahora</a><input type="checkbox" id="fav-2" class="sr-only" /><label class="btn btn-secondary fav" for="fav-2"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+    <section class="detail-page" id="d3"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1729158323904-c3147d9138a9?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1729158323904-c3147d9138a9?auto=format&fit=crop&w=800&q=80" alt="Portada de FIFA 24" /><div class="detail-copy"><span class="eyebrow">Deportes · Simulación</span><h1>FIFA 24</h1><p class="detail-description">Vive el fútbol con clubes, ligas y jugadores de todo el mundo en una experiencia auténtica.</p><dl><div><dt>Desarrollador</dt><dd>EA Sports</dd></div><div><dt>Fecha de lanzamiento</dt><dd>29/09/2023</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>50 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$109.900</strong></div><a class="btn btn-primary" href="#buy-3">Comprar ahora</a><input type="checkbox" id="fav-3" class="sr-only" /><label class="btn btn-secondary fav" for="fav-3"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+    <section class="detail-page" id="d4"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1788251402421-38cec6b02f96?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1788251402421-38cec6b02f96?auto=format&fit=crop&w=800&q=80" alt="Portada de Minecraft" /><div class="detail-copy"><span class="eyebrow">Aventura · Sandbox</span><h1>Minecraft</h1><p class="detail-description">Explora mundos infinitos y construye desde la casa más sencilla hasta el castillo más grandioso.</p><dl><div><dt>Desarrollador</dt><dd>Mojang Studios</dd></div><div><dt>Fecha de lanzamiento</dt><dd>18/11/2011</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>2 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$119.900</strong></div><a class="btn btn-primary" href="#buy-4">Comprar ahora</a><input type="checkbox" id="fav-4" class="sr-only" /><label class="btn btn-secondary fav" for="fav-4"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+    <section class="detail-page" id="d5"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1679590373888-9363db416357?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1679590373888-9363db416357?auto=format&fit=crop&w=800&q=80" alt="Portada de Forza Horizon 5" /><div class="detail-copy"><span class="eyebrow">Carreras · Mundo abierto</span><h1>Forza Horizon 5</h1><p class="detail-description">Lidera expediciones por paisajes vibrantes en cientos de los mejores vehículos del mundo.</p><dl><div><dt>Desarrollador</dt><dd>Playground Games</dd></div><div><dt>Fecha de lanzamiento</dt><dd>05/11/2021</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>110 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$199.900</strong></div><a class="btn btn-primary" href="#buy-5">Comprar ahora</a><input type="checkbox" id="fav-5" class="sr-only" /><label class="btn btn-secondary fav" for="fav-5"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+    <section class="detail-page" id="d6"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1645300041147-769f0a6bb778?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1645300041147-769f0a6bb778?auto=format&fit=crop&w=800&q=80" alt="Portada de Elden Ring" /><div class="detail-copy"><span class="eyebrow">RPG · Fantasía</span><h1>Elden Ring</h1><p class="detail-description">Levántate, Sinluz, y recorre las Tierras Intermedias para convertirte en el Señor del Círculo.</p><dl><div><dt>Desarrollador</dt><dd>FromSoftware</dd></div><div><dt>Fecha de lanzamiento</dt><dd>25/02/2022</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>60 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$219.900</strong></div><a class="btn btn-primary" href="#buy-6">Comprar ahora</a><input type="checkbox" id="fav-6" class="sr-only" /><label class="btn btn-secondary fav" for="fav-6"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+    <section class="detail-page" id="d7"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1682079809978-559f47823e87?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1682079809978-559f47823e87?auto=format&fit=crop&w=800&q=80" alt="Portada de Night Circuit" /><div class="detail-copy"><span class="eyebrow">Carreras · Arcade</span><h1>Night Circuit</h1><p class="detail-description">Compite en circuitos nocturnos donde cada curva cambia la carrera.</p><dl><div><dt>Desarrollador</dt><dd>Neon Works</dd></div><div><dt>Fecha de lanzamiento</dt><dd>12/03/2024</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>38 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$89.900</strong></div><a class="btn btn-primary" href="#buy-7">Comprar ahora</a><input type="checkbox" id="fav-7" class="sr-only" /><label class="btn btn-secondary fav" for="fav-7"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+    <section class="detail-page" id="d8"><div class="detail-backdrop"><img src="https://images.unsplash.com/photo-1700257992019-0cd5995be606?auto=format&fit=crop&w=800&q=80" alt="" /></div><div class="detail-inner"><a class="back-link detail-back" href="#store"><svg class="ic"><use href="#i-back"/></svg>Volver</a><div class="detail-layout"><img class="detail-cover" src="https://images.unsplash.com/photo-1700257992019-0cd5995be606?auto=format&fit=crop&w=800&q=80" alt="Portada de Silent District" /><div class="detail-copy"><span class="eyebrow">Acción · Sigilo</span><h1>Silent District</h1><p class="detail-description">Infiltra una ciudad aislada y descubre quién controla sus calles.</p><dl><div><dt>Desarrollador</dt><dd>North Studio</dd></div><div><dt>Fecha de lanzamiento</dt><dd>28/06/2024</dd></div><div><dt>Plataforma</dt><dd>PC</dd></div><div><dt>Tamaño</dt><dd>42 GB</dd></div></dl><div class="detail-purchase"><div><small>Precio</small><strong>$74.900</strong></div><a class="btn btn-primary" href="#buy-8">Comprar ahora</a><input type="checkbox" id="fav-8" class="sr-only" /><label class="btn btn-secondary fav" for="fav-8"><svg class="ic"><use href="#i-heart"/></svg><span class="off">Agregar a favoritos</span><span class="on">En favoritos</span></label></div></div></div></div></section>
+
+  </main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
